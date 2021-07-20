@@ -1,18 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-// Nuevo componente Title
-function Title(props) {
-  return <h1>{props.texto}</h1>;
-}
+import ArticleContainer from './components/ArticleContainer';
+import { Title, Paragraph, EnNegrita, DeColorRojo } from './components/TextFormat';
 
 function App() {
-  // Uso del componente Title con el valor "Hola Mundo"
   return (
-    <>
-      <Title texto="Hola Mundo!!"/>
-      <Title texto="Hello Word!!"/>
-    </>
+    <ArticleContainer>
+      <Title>
+        Hola <i>Mundo</i>!
+      </Title>
+      <Paragraph>
+        Párrafo de Mi Artículo
+        <EnNegrita>
+          <DeColorRojo>Importante</DeColorRojo>
+        </EnNegrita>!
+      </Paragraph>
+    </ArticleContainer>
   );
 }
 
